@@ -90,7 +90,7 @@
 
 
 
-**导入数据：**
+**导入数据：**           
 》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
 注意事项： 默认的 neo4j 的配置原文中没有提及，现在需要进行以下修改：
 
@@ -98,7 +98,7 @@ vim neo4j/conf/neo4j.conf
 
 dbms.shell.enabled=true         
 dbms.connectors.default_listen_address=0.0.0.0        
-#dbms.directories.import=import   (注释掉，这样可以根据自己项目中 *。csv文件（下面所说的导入文件）的绝对路径，来导入文件)
+#dbms.directories.import=import   (注释掉，这样可以根据自己项目中 *。csv文件（下面所说的导入文件）的绝对路径，来导入文件)   
 》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
 
 
