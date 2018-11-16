@@ -96,8 +96,8 @@
 
 vim neo4j/conf/neo4j.conf
 
-dbms.shell.enabled=true
-dbms.connectors.default_listen_address=0.0.0.0
+dbms.shell.enabled=true         
+dbms.connectors.default_listen_address=0.0.0.0        
 #dbms.directories.import=import   (注释掉，这样可以根据自己项目中 *。csv文件（下面所说的导入文件）的绝对路径，来导入文件)
 》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
 
@@ -224,10 +224,10 @@ CREATE (city)-[:CityWeather { type: line.relation }]->(weather)
 ```
 sudo sh django_server_start.sh    （原文）
 》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
-修改： 上面原文无法执行成功，他就写着一句话： python3 manage.py runserver 
-所以直接执行： python3 manage.py runserver 0.0.0.0：8000
-更改：demo/settings.py
-ALLOWED_HOSTS = ['0.0.0.0']       为了能使  其他IP 访问
+修改： 上面原文无法执行成功，他就写着一句话： python3 manage.py runserver         
+所以直接执行： python3 manage.py runserver 0.0.0.0：8000        
+更改：demo/settings.py       
+ALLOWED_HOSTS = ['0.0.0.0']       为了能使  其他IP 访问       
 》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
 ```
 
