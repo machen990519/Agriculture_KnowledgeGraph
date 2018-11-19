@@ -227,7 +227,7 @@ sudo sh django_server_start.sh    （原文）
 修改： 上面原文无法执行成功，他就写着一句话： python3 manage.py runserver         
 所以直接执行： python3 manage.py runserver 0.0.0.0：8000        
 更改：demo/settings.py       
-ALLOWED_HOSTS = ['0.0.0.0']       为了能使  其他IP 访问       
+ALLOWED_HOSTS = ['0.0.0.0',47.105.127.125]       为了能使  其他IP 访问       
 》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
 ```
 
