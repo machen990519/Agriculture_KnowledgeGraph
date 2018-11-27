@@ -97,7 +97,17 @@
 
 
 
-**导入数据：**
+**导入数据：**           
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》          
+注意事项： 默认的 neo4j 的配置原文中没有提及，现在需要进行以下修改：
+
+vim neo4j/conf/neo4j.conf
+
+dbms.shell.enabled=true         
+dbms.connectors.default_listen_address=0.0.0.0        
+#dbms.directories.import=import   (注释掉，这样可以根据自己项目中 *。csv文件（下面所说的导入文件）的绝对路径，来导入文件)   
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
+
 
 1. 将hudong_pedia.csv导入neo4j：开启neo4j，进入neo4j控制台。将hudong_pedia.csv放入neo4j安装目录下的/import目录。在控制台依次输入：
 
@@ -219,7 +229,13 @@ CREATE (city)-[:CityWeather { type: line.relation }]->(weather)
 4. 进入demo目录，然后运行脚本：
 
 ```
-sudo sh django_server_start.sh
+sudo sh django_server_start.sh    （原文）
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
+修改： 上面原文无法执行成功，他就写着一句话： python3 manage.py runserver         
+所以直接执行： python3 manage.py runserver 0.0.0.0：8000        
+更改：demo/settings.py       
+ALLOWED_HOSTS = ['0.0.0.0',47.105.127.125]       为了能使  其他IP 访问       
+》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》》
 ```
 
 这样就成功的启动了django。我们进入8000端口主页面，输入文本，即可看到以下命名实体和分词的结果（确保django和neo4j都处于开启状态）
