@@ -1,0 +1,19 @@
+public List<String[]> violence(String[][] strs){
+		List<String[]> list = new ArrayList<>();
+		for(int i = 0;i<strs.length;) {
+			String key = strs[i][1];
+			String value = strs[i][0];
+			i++;
+			for(;i<strs.length;) {
+				if(key.equals(strs[i][1])) {
+					value = value+"|"+strs[i][0];
+					i++;
+				}else {
+					break;
+				}
+			}
+			String[] st = {key,value};
+			list.add(st);
+		}
+		return list;
+	}

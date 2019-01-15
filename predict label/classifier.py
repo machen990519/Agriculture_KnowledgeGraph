@@ -35,7 +35,7 @@ class Classifier:
 	baseInfoKeyList_num = None
 	
 	# 相似度权值，分别为：title，openTypeList，baseInfoKeyList，baseInfoValueList，detail
-	weight = [0.2,0.2,0.2,0.2,0.2]  
+	weight = [0.2,0.2,0.2,0.2,0.2]
 	# knn的k值
 	k = 10 
 	
